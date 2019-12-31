@@ -14,7 +14,7 @@
       <section class="hero-nav-title" onclick="window.location = '/'">Ben Evans</section>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="#">Portfolio</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="/cv">CV</a></li>
       </ul>
     </section>
@@ -23,15 +23,15 @@
       <section class="hero-content">
         <section class="hero-title">Hi, I'm <b>Ben</b></section>
         <section class="hero-subtitle">Fullstack <high>Web Developer</high></section>
-        <section class="hero-git-links">
-          <a href="https://github.com/BeansJS">Github</a>
-          <a href="https://gitlab.com/benamon11">Gitlab</a>
-        </section>
+        <!--<section class="hero-git-links">-->
+          <!--<a href="https://github.com/BeansJS">Github</a>-->
+          <!--<a href="https://gitlab.com/benamon11">Gitlab</a>-->
+        <!--</section>-->
       </section>
     </section>
     </section>
     
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <section class="portfolio-title">Client Projects</section>
       <section class="portfolio-list">
         <section class="portfolio-list-item portfolio-list-item-start">
@@ -45,9 +45,9 @@
             <a class="portfolio-list-item-links-live" id="not-active">Live</a>
             <a class="portfolio-list-item-links-git" href="https://github.com/BeansJS/job-ranking-algorithm-ci">Git</a>
           </section>
-          <section class="portfolio-list-item-more">
-            <a href="#">See More</a>
-          </section>
+          <!--<section class="portfolio-list-item-more">-->
+            <!--<a href="#">See More</a>-->
+          <!--</section>-->
         </section>
         <section class="portfolio-list-item portfolio-list-item-end">
           <section class="portfolio-list-item-header">
@@ -60,9 +60,9 @@
             <a class="portfolio-list-item-links-live" id="not-active">Live</a>
             <a class="portfolio-list-item-links-git" href="https://github.com/BeansJS/chameleo-pass">Git</a>
           </section>
-          <section class="portfolio-list-item-more">
-            <a href="#">See More</a>
-          </section>
+          <!--<section class="portfolio-list-item-more">-->
+            <!--<a href="#">See More</a>-->
+          <!--</section>-->
         </section>
       </section>
     </section>
@@ -72,10 +72,10 @@
         <section class="reference-list-item">
           <section class="reference-list-item-title">
             <section class="reference-list-item-title-name">Dion Van-Overdijk</section>
-            <section class="reference-list-item-title-job">Teacher at Banbury and Bicester College</section>
+            <section class="reference-list-item-title-job">Banbury and Bicester College</section>
           </section>
-          <section class="reference-list-item-content">"Placeholder Text"</section>
-          <section class="reference-list-item-job">Position - Student</section>
+          <section class="reference-list-item-content">"Gifted developer who will achieve whatever he sets his head to"</section>
+          <section class="reference-list-item-job">Teacher</section>
         </section>
       </section>
     </section>
@@ -102,5 +102,22 @@
       </section>
     </section>
   </section>
+  <section class="loading-screen" id="loading-main">
+      <img src="/img/baby-chameleon.png" alt="">
+  </section>
+  <section class="loading-screen-left" id="loading-left"></section>
+  <section class="loading-screen-right" id="loading-right"></section>
+  <script>
+    const removeLoadingPage = () => {
+      const main = document.getElementById('loading-main');
+      const left = document.getElementById('loading-left');
+      const right = document.getElementById('loading-right');
+      main.style.display = 'none';
+      left.style.width = '0';
+      right.style.width = '0';
+    }
+    document.addEventListener('DOMContentLoaded', removeLoadingPage, false);
+    window.addEventListener('load', removeLoadingPage, false )
+  </script>
 </body>
 </html>
