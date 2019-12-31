@@ -1,5 +1,6 @@
 import {Request, Response} from 'express';
 import nodemailer from 'nodemailer';
+console.log(process.env)
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -28,14 +29,15 @@ export const PostEmail = (req: Request, res: Response) => {
     }
     console.log(info);
   });
-  return res.render('index');
+  return res.redirect('/');
 };
 
 export const GetCV = (req: Request, res: Response) => {
   const CVPath = `${__dirname}/../public/uploads/CV.docx`;
   // const CVPath =
   //  '/home/bean/Documents/dev/web/portfolio/dist/public/uploads/CV.docx';
-  return res.download(CVPath);
+  res.download(CVPath);
+  return res.redirect('/');
   //console.log(CVPath);
   //res.redirect('/');
 };

@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const nodemailer_1 = __importDefault(require("nodemailer"));
+console.log(process.env);
 const transporter = nodemailer_1.default.createTransport({
     service: 'gmail',
     auth: {
@@ -29,13 +30,14 @@ exports.PostEmail = (req, res) => {
         }
         console.log(info);
     });
-    return res.render('index');
+    return res.redirect('/');
 };
 exports.GetCV = (req, res) => {
     const CVPath = `${__dirname}/../public/uploads/CV.docx`;
     // const CVPath =
     //  '/home/bean/Documents/dev/web/portfolio/dist/public/uploads/CV.docx';
-    return res.download(CVPath);
+    res.download(CVPath);
+    return res.redirect('/');
     //console.log(CVPath);
     //res.redirect('/');
 };

@@ -21,6 +21,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express_1.default.static(path_1.default.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
-app.set('views', 'dist/views');
+app.set('views', '/home/chameleo/apps/portfolio/dist/views');
 app.use('/', home_1.router);
-app.listen(3000, () => console.log('Server running...'));
+app.listen(80, () => console.log('Server running...'));
