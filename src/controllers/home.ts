@@ -33,6 +33,5 @@ export const PostEmail = (req: Request, res: Response) => {
 
 export const GetCV = (req: Request, res: Response) => {
   const CVPath = `${__dirname}/../public/uploads/CV.docx`;
-  res.download(CVPath);
-  return res.redirect('/');
+  return res.download(CVPath);
 };
