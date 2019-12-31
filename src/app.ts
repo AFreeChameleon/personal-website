@@ -15,4 +15,4 @@ app.set('views', 'dist/views');
 
 app.use('/', homeRouter);
 
-app.listen(80, () => console.log('Server running...'));
+app.listen(3000, () => console.log('Server running...'));
