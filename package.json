@@ -1,0 +1,37 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev": "nodemon src/app.ts",
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeansJS/personal-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BeansJS/personal-website/issues"
+  },
+  "homepage": "https://github.com/BeansJS/personal-website#readme",
+  "dependencies": {
+    "@types/nodemailer": "^6.4.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.2",
+    "nodemon": "^2.0.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/node": "^13.1.1",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.4"
+  }
+}
