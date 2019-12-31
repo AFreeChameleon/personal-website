@@ -107,6 +107,7 @@
   </section>
   <section class="loading-screen-left" id="loading-left"></section>
   <section class="loading-screen-right" id="loading-right"></section>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>
     const removeLoadingPage = () => {
       const main = document.getElementById('loading-main');
@@ -116,8 +117,8 @@
       left.style.width = '0';
       right.style.width = '0';
     }
-    document.addEventListener('DOMContentLoaded', removeLoadingPage, false);
-    window.addEventListener('load', removeLoadingPage, false )
+    $(document).ready(removeLoadingPage);
+    
   </script>
 </body>
 </html>
